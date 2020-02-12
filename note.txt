@@ -1,0 +1,3 @@
+Format of message to be posted to queue:
+
+{"name":"shruti"}
