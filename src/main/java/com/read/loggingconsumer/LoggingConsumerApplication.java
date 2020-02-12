@@ -1,5 +1,7 @@
 package com.read.loggingconsumer;
 
+import java.util.List;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.stream.annotation.EnableBinding;
@@ -16,8 +18,8 @@ public class LoggingConsumerApplication {
 	}
 
 	@StreamListener(Sink.INPUT)
-	public void handle(Person person) {
-		System.out.println("Received: " + person);
+	public void handle(List<Person> persons) {
+		System.out.println("Received: " + persons);
 	}
 
 	public static class Person {
